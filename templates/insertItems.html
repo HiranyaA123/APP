@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Item Input</title>
+
+    </head>
+    <body>
+        <link rel="stylesheet" href="css.css">
+        <div id="outside">
+            <form id="application" action="/new_item" method="post">
+                <h1>Item Input</h1>
+
+
+                <fieldset>
+                    <legend>Details</legend>
+
+                    <div id="label">
+                        <label id="name">Name:</label>
+                        <input name="item_name" type="text" id="name1" placeholder="Enter the item name" required>
+                    </div>
+                    <div id="label">
+                        <label id="barcode">Barcode:</label>
+                        <input name="barcode" type="text" id="barcode1" placeholder="Enter the Barcode" required>
+                    </div>
+                    <div id="label">
+                        <p>Description</p>
+                        <textarea name="description"></textarea>
+                    </div>
+
+
+
+                    <div id="Submit Button">
+                        <button type="submit">Submit</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>
