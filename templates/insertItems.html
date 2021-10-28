@@ -6,9 +6,9 @@
 
     </head>
     <body>
-        <link rel="stylesheet" href="css.css">
+        <link rel="stylesheet" href="static/css.css">
         <div id="outside">
-            <form id="application" action="/new_item" method="post">
+            <form id="application" action="/new_item" method="POST">
                 <h1>Item Input</h1>
 
 
@@ -17,7 +17,7 @@
 
                     <div id="label">
                         <label id="name">Name:</label>
-                        <input name="item_name" type="text" id="name1" placeholder="Enter the item name" required>
+                        <input name="name" type="text" id="name1" placeholder="Enter the item name" required>
                     </div>
                     <div id="label">
                         <label id="barcode">Barcode:</label>
@@ -27,6 +27,15 @@
                         <p>Description</p>
                         <textarea name="description"></textarea>
                     </div>
+                    <div id="label">
+                        <label id="sku">SKU:</label>
+                        <input name="sku" type="text" id="sku1" placeholder="Enter the SKU" required>
+                    </div>
+                    <div id="label">
+                        <label id="exgst">EXGST:</label>
+                        <input name="exgst" type="text" id="exgst1" placeholder="Enter the Cost Price" required>
+                    </div>
+
 
 
 
