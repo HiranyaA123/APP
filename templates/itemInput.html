@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+    <form style="margin:20px" action="/new_item" method="POST">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Item Name</label>
+            <input name="name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Brain" required>
+            <label for="exampleFormControlInput1" class="form-label">Barcode</label>
+            <input name="barcode" type="text" class="form-control" id="exampleFormControlInput1" placeholder="123456"required>
+            <label for="exampleFormControlInput1" class="form-label">SKU</label>
+            <input name="sku" type="text" class="form-control" id="exampleFormControlInput1" placeholder="" required>
+            <label for="exampleFormControlInput1" class="form-label">Price</label>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">$</span>
+                <input name="exgst" type="text" class="form-control" id="exampleFormControlInput1" placeholder="10" aria-label="Username" aria-describedby="basic-addon1" required>
+            </div>
+
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+          <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+    </form>
+{% endblock %}

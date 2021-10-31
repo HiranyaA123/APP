@@ -22,33 +22,32 @@ def items():
 
 @app.route("/new_item", methods=['GET', 'POST'])
 def new_items():
-    if request.form == 'POST':
-        name = request.form['name']
-        barcode = request.form['barcode']
-        description = request.form['description']
-        sku = request.form['sku']
-        exgst = request.form['exgst']
-        print(name)
+    if request.method == 'POST':
+        name1 = request.form['name']
+        barcode1 = request.form['barcode']
+        description1 = request.form['description']
+        sku1 = request.form['sku']
+        exgst1 = request.form['exgst']
+        print(name1)
 
-        connection = sqlite3.connect(app.DB_FILE)
+        connection = sqlite3.connect(config.DB_FILE)
         cursor = connection.cursor()
         cursor.execute("""INSERT INTO items (name, barcode, description, sku, exgst )VALUES(?,?,?,?,?)""",
-                       (name, barcode, description, sku, exgst))
+                       (name1, barcode1, description1, sku1, exgst1))
+        connection.commit()
+
+
     else:
-        print("It didnt work")
+        print("")
 
-    return render_template("insertItems.html")
+    return render_template("itemInput.html")
+
+@app.route("/test")
+def test():
+    return render_template("itemInput.html")
 
 
 
-@app.route("/items/<item>")
-def items(item):
-    connection=sqlite3.connect(config.DB_FILE)
-    connection.row_factory=sqlite3.Row
-    cursor=connection.cursor()
-    cursor.execute("SELECT * FROM items")
-    rows=cursor.fetchall()
-    return render_template("item_list.html", rows=rows)
 
 
 if __name__ == "__main__":
