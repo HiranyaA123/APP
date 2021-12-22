@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<body class="text-center" style="background-color:#003798;">
+<div class="container-sm">
+    <div class="bg-image" style="
+      background-image: url('https://www.colorhexa.com/d3d3d3.png');
+      height: 100vh;">
+    <form style="margin:20px" action="/new_user" method="POST">
+        <div class="mb-3">
+     <img class="mb-4" src="https://link.vex.com/storage/App/Resource/000/000/861/image/thumbnail/V5.png" alt="Vex v5 logo" width="72" height="72">
+      <img class="mb-4" src="https://www.pedarecc.sa.edu.au/wp-content/themes/pedare/img/pedare-logo-new.png" alt="Pedare logo" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Registration form:</h1>
+      <label for="inputFirstname" class="sr-only">First name</label>
+      <input name='firstname' type="text" id="inputFirstname" class="form-control" placeholder="Firstname" required="">
+        <label for="inputLastname" class="sr-only">Last name</label>
+      <input name='lastname' type="text" id="inputLastname" class="form-control" placeholder="Lastname" required="">
+      <label for="inputEmail" class="sr-only">School email</label>
+      <input name='email' type="email" id="inputEmail" class="form-control" placeholder="Email" required="">
+            <label for="inputYearlevel" class="sr-only">Year level</label>
+      <input name='yearlevel' id="inputYearlevel" class="form-control" placeholder="Year Level" required="">
+            <label for="inputTeam" class="sr-only">VEX Team</label>
+      <input name='team' type="text" id="inputTeam" class="form-control" placeholder="VEX Team" required="">
+            <div class="input-group mb-3">
+            </div>
+        </div>
+        <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+    </form>
+    </div>
+   </div>
+   </body>
+{% endblock %}
