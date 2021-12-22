@@ -1,6 +1,5 @@
 import sqlite3
 
-
 conn = sqlite3.connect("app.db")
 c = conn.cursor()
 
@@ -18,10 +17,10 @@ c.execute("""CREATE TABLE IF NOT EXISTS loans(
             item_id INTEGER NOT NULL,
             user_id INTEGER NOT NULL,
             date DATE NOT NULL,
-            
+
             FOREIGN KEY(item_id) REFERENCES item(id)
             FOREIGN KEY(user_id) REFERENCES user(id)
-    
+
             )""")
 
 c.execute("""CREATE TABLE IF NOT EXISTS users(
@@ -29,9 +28,9 @@ c.execute("""CREATE TABLE IF NOT EXISTS users(
           firstname TEXT NOT NULL,
           lastname TEXT NOT NULL,
           email TEXT NOT NULL,
-          yearlevel INTEGER NOT NULL
+          yearlevel INTEGER NOT NULL,
+          team TEXT 
           )""")
-
 
 conn.commit()
 conn.close()
