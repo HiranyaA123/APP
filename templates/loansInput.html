@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+    <form style="margin:20px" action="/new_item" method="POST">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Item Barcode</label>
+            <input name="item_barcode" type="text" class="form-control" id="exampleFormControlInput1" placeholder="2452673" required>
+            <label for="exampleFormControlInput1" class="form-label">User ID</label>
+            <input name="user_ID" type="text" class="form-control" id="exampleFormControlInput1" placeholder="kabons"required>
+            <label for="exampleFormControlInput1" class="form-label">Date</label>
+            <input name="date" type="date" class="form-control" id="exampleFormControlInput1" placeholder=" " required>
+        </div>
+        <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+    </form>
+{% endblock %}

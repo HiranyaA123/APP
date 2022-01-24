@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <form style="margin:20px" action="/returns" method="POST">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Item Barcode</label>
+            <input name="item_barcode" type="text" class="form-control" id="exampleFormControlInput1"  required>
+
+        <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+    </form>
+{% endblock %}

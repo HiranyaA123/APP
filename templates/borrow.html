@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+    <form style="margin:20px" action="/borrow" method="POST">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Item Barcode</label>
+            <input name="item_barcode" type="text" class="form-control" id="exampleFormControlInput1"  required>
+            <label for="exampleFormControlInput1" class="form-label">Student ID</label>
+            <input name="student_id" type="text" class="form-control" id="exampleFormControlInput1" placeholder="123456"required>
+            <label for="exampleFormControlInput1" class="form-label">Date</label>
+            <input name="date" type="date" class="form-control" id="exampleFormControlInput1" required>
+
+
+
+        <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+    </form>
+{% endblock %}

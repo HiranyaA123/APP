@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<a class="btn btn-primary" href="/new_user" role="button">Add new user</a>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">firstname</th>
+      <th scope="col">lastname</th>
+      <th scope="col">email</th>
+      <th scope="col">yearlevel</th>
+      <th scope="col">team</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in rows %}
+
+    <tr>
+      <td>{{row.firstname}}</td>
+      <td>{{row.lastname}}</td>
+      <td>{{row.email}}</td>
+      <td>{{row.yearlevel}}</td>
+      <td>{{row.team}}</td>
+
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+{% endblock %}

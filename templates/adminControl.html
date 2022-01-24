@@ -1,29 +1,33 @@
 {% extends "base.html" %}
 {% block content %}
-    
 
-        <div class="header">
-            <h1>Admin Controls</h1>
-            
-            <div class="dropdown">
-              <button class="dropbtn" style="z-index: 2">Dropdown</button>
-              <div class="dropdown-content">
-                  <a href="test.html">Link 1</a>
-                  <a href="test.html">Link 2</a>
-                  <a href="test.html">Link 3</a>
-            </div>
-        </div>
-        
-        </div>
-        
-        <link rel="stylesheet" href="C:\Users\Hiranya\PycharmProjects\App\static\admin.css">
-        
-        <div class="buttons">
-            <a class="btn btn-primary" href="/new_item" role="button">New Items</a>
-            <a class="btn btn-primary" href="#" role="button">New Users</a>
-            <a class="btn btn-primary" href="#" role="button">Loans</a>
+    <div class="row row-cols-1 row-cols-md-2 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Borrow</h4>
+          </div>
+          <div class="card-body">
+            <h1><i class="bi bi-upc"></i></h1>
 
-            
+            <a class="w-100 btn btn-lg btn-outline-primary" href="/borrow" role="button">Borrow</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Return</h4>
+          </div>
+          <div class="card-body">
+
+            <a class="w-100 btn btn-lg btn-outline-primary" href="/returns" role="button">Return</a>
+          </div>
+        </div>
+    </div>
+
+
         </div>
         
+
 {% endblock %}
